@@ -4,6 +4,7 @@
         name="viviendas_properties_names">
     <item name="url">http://servicedatosabiertoscolombia.cloudapp.net/v1/Fondo_Nacional_Ahorro/bdfnaviviendafinal?$format=json</item>
     <item name="acabados">acabados</item>
+    <item name="aplica_subsidio">aplica_subsidio</item>
     <item name="areadesde">areadesde</item>
     <item name="areahasta">areahasta</item>
     <item name="barrio">barrio</item>
@@ -18,7 +19,7 @@
     <item name="direccion_sala_de_ventas">direccion_saladeventas</item>
     <item name="direccion_sede_principal_constructora">direccionsede_principal_constructora</item>
     <item name="email_constructora">emailconstructora</item>
-    <item name="estrtato">estrato</item>
+    <item name="estrato">estrato</item>
     <item name="horario_de_atencion_desde">horadeatenciondesde</item>
     <item name="hora_de_atencion_hasta">horadeatencion_hasta</item>
     <item name="localidad_o_zona">localidadozona</item>

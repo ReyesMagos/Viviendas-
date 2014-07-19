@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class Vivienda {
 
+    private String aplicaSubsidio;
     private String telefonoCelularSalaDeVentas;
     private String direccionSalaDeVentas;
     private List<Bitmap> imagenes;
@@ -49,6 +50,14 @@ public class Vivienda {
     private String precioHasta;
     private String nombreConstructora;
     private String nombreProyecto;
+
+    public String getAplicaSubsidio() {
+        return aplicaSubsidio;
+    }
+
+    public void setAplicaSubsidio(String aplicaSubsidio) {
+        this.aplicaSubsidio = aplicaSubsidio;
+    }
 
     public String getPrecioHasta() {
         return precioHasta;

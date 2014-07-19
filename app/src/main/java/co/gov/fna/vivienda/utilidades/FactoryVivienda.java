@@ -53,6 +53,8 @@ public class FactoryVivienda implements IFactoryVivienda {
                 int j = 0;
                 v.setAcabado(object.getString(arrayPropertiesNames[j]));
                 j++;
+                v.setAplicaSubsidio(object.getString(arrayPropertiesNames[j]));
+                j++;
                 v.setAreaDesde(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setAreHasta(object.getString(arrayPropertiesNames[j]));
