@@ -8,18 +8,17 @@ import android.view.View;
 
 import com.example.usuario.tryww.R;
 
-import co.gov.fna.vivienda.controlador.Controlador;
-import co.gov.fna.vivienda.servicios.GetRestServices;
+import co.gov.fna.vivienda.controlador.ControladorTimelineActivity;
 
 
-public class MyActivity extends Activity {
-    private Controlador controlador;
+public class TimelineActivity extends Activity {
+    private ControladorTimelineActivity controlador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-        controlador = new Controlador(this);
+        controlador = new ControladorTimelineActivity(this);
     }
 
     public void getServices(View v){

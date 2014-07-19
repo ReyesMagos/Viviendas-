@@ -6,23 +6,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.List;
-
-import co.gov.fna.vivienda.modelo.entidades.Vivienda;
-import co.gov.fna.vivienda.presentacion.actividades.MyActivity;
+import co.gov.fna.vivienda.presentacion.actividades.TimelineActivity;
 import co.gov.fna.vivienda.servicios.GetRestServices;
 import co.gov.fna.vivienda.utilidades.FactoryVivienda;
 
 /**
  * Created by usuario on 18/07/14.
  */
-public class Controlador {
+public class ControladorTimelineActivity {
 
     private boolean isGoingForViviendasSet;
-    private MyActivity activity;
+    private TimelineActivity activity;
     private String[] urlSet;
 
-    public Controlador(MyActivity actividad){
+    public ControladorTimelineActivity(TimelineActivity actividad){
         this.activity= actividad;
         this.urlSet= actividad.getResources().getStringArray(R.array.urlset);
 
@@ -64,11 +61,11 @@ public class Controlador {
         this.isGoingForViviendasSet = isGoingForViviendasSet;
     }
 
-    public MyActivity getActivity() {
+    public TimelineActivity getActivity() {
         return activity;
     }
 
-    public void setActivity(MyActivity activity) {
+    public void setActivity(TimelineActivity activity) {
         this.activity = activity;
     }
 

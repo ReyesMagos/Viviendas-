@@ -9,15 +9,10 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.List;
-
-import co.gov.fna.vivienda.controlador.Controlador;
-import co.gov.fna.vivienda.presentacion.actividades.MyActivity;
-import co.gov.fna.vivienda.utilidades.FactoryVivienda;
-import co.gov.fna.vivienda.modelo.entidades.Vivienda;
+import co.gov.fna.vivienda.controlador.ControladorTimelineActivity;
+import co.gov.fna.vivienda.presentacion.actividades.TimelineActivity;
 
 /**
  * Created by usuario on 1/07/14.
@@ -28,12 +23,12 @@ public class GetRestServices extends AsyncTask<String,String, String> {
     private String url;
     private String TAG_RESPONSE_OK="its_ok";
     private String TAG_RESPONSE_ERROR="something_go_wrong";
-    private Controlador controlador;
+    private ControladorTimelineActivity controlador;
 
     public GetRestServices(String url,Activity activity) {
         this.url = url;
-        if(activity instanceof MyActivity) {
-            this.controlador = new Controlador((MyActivity) activity);
+        if(activity instanceof TimelineActivity) {
+            this.controlador = new ControladorTimelineActivity((TimelineActivity) activity);
             controlador.setGoingForViviendasSet(true);
         }
 
