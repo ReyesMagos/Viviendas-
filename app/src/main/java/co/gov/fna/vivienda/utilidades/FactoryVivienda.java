@@ -109,6 +109,8 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setTelefonoFijoSalaDeVentas(object.getString(arrayPropertiesNames[j]));
                 j++;
+                v.setTipoInmuebleOfrecido(object.getString(arrayPropertiesNames[j]));
+                j++;
 
 
 

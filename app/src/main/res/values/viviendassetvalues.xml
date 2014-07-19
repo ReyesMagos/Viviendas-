@@ -32,6 +32,7 @@
     <item name="telefono_contacto_constructora">telefonocontacto_constructora</item>
     <item name="telefono_celular_sala_de_ventas">telefonocelularsaladeventas</item>
     <item name="telefono_fijo_sala_de_ventas">telefonofijosala_deventas</item>
+    <item name="tipo_de_inmueble_ofrecido">tipode_inmueble_ofrecido</item>
 
 
 
