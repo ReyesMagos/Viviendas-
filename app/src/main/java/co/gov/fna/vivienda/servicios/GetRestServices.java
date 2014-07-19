@@ -1,5 +1,6 @@
 package co.gov.fna.vivienda.servicios;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 
 import org.apache.http.HttpEntity;
@@ -14,6 +15,7 @@ import org.json.JSONObject;
 import java.util.List;
 
 import co.gov.fna.vivienda.controlador.Controlador;
+import co.gov.fna.vivienda.presentacion.actividades.MyActivity;
 import co.gov.fna.vivienda.utilidades.FactoryVivienda;
 import co.gov.fna.vivienda.modelo.entidades.Vivienda;
 
@@ -28,9 +30,10 @@ public class GetRestServices extends AsyncTask<String,String, String> {
     private String TAG_RESPONSE_ERROR="something_go_wrong";
     private Controlador controlador;
 
-    public GetRestServices(String url) {
+    public GetRestServices(String url,Activity activity) {
         this.url = url;
-        this.controlador= new Controlador();
+        this.controlador= new Controlador((MyActivity)activity);
+
     }
 
     public String getUrl() {

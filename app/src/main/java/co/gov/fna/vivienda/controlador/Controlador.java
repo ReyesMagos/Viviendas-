@@ -46,10 +46,10 @@ public class Controlador {
         GetRestServices services;
         if(isGoingForViviendasSet) {
              services =
-                    new GetRestServices(getUrlSet()[0]);
+                    new GetRestServices(getUrlSet()[0],getActivity());
         }else{
             services =
-                    new GetRestServices(getUrlSet()[1]);
+                    new GetRestServices(getUrlSet()[1],getActivity());
         }
         this.isGoingForViviendasSet=true;
         services.execute();
