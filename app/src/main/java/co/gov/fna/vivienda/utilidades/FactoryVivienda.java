@@ -83,6 +83,9 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setEmailConstructora(object.getString(arrayPropertiesNames[j]));
                 j++;
+                v.setFechaDeEntrega(object.getString(arrayPropertiesNames[j]));
+                j++;
+                
                 v.setEstrato(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setHoraDeAtencionDesde(object.getString(arrayPropertiesNames[j]));
