@@ -1,4 +1,4 @@
-package co.gov.fna.vivienda.servicios;
+package co.gov.fna.servicios;
 
 import android.os.AsyncTask;
 
@@ -8,14 +8,9 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.List;
-
-import co.gov.fna.vivienda.controlador.Controlador;
-import co.gov.fna.vivienda.utilidades.FactoryVivienda;
-import co.gov.fna.vivienda.modelo.entidades.Vivienda;
+import co.gov.fna.controller.ControladorVivienda;
 
 /**
  * Created by usuario on 1/07/14.
@@ -26,11 +21,11 @@ public class GetRestServices extends AsyncTask<String,String, String> {
     private String url;
     private String TAG_RESPONSE_OK="its_ok";
     private String TAG_RESPONSE_ERROR="something_go_wrong";
-    private Controlador controlador;
+    private ControladorVivienda controlador;
 
     public GetRestServices(String url) {
         this.url = url;
-        this.controlador= new Controlador();
+        this.controlador= new ControladorVivienda();
     }
 
     public String getUrl() {

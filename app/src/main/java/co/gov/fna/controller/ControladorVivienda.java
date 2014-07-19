@@ -1,4 +1,4 @@
-package co.gov.fna.vivienda.controlador;
+package co.gov.fna.controller;
 
 import com.example.usuario.tryww.R;
 
@@ -6,17 +6,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.List;
-
-import co.gov.fna.vivienda.modelo.entidades.Vivienda;
-import co.gov.fna.vivienda.presentacion.actividades.MyActivity;
-import co.gov.fna.vivienda.servicios.GetRestServices;
-import co.gov.fna.vivienda.utilidades.FactoryVivienda;
+import co.gov.fna.activity.MyActivity;
+import co.gov.fna.servicios.GetRestServices;
+import co.gov.fna.implementation.FactoryViviendaImpl;
 
 /**
  * Created by usuario on 18/07/14.
  */
-public class Controlador {
+public class ControladorVivienda {
 
     private boolean isGoingForViviendasSet;
     private MyActivity activity;
@@ -26,7 +23,7 @@ public class Controlador {
             try{
                 String[] viviendaPropertysNames = activity.getResources().getStringArray(R.array.viviendas_properties_names);
                 JSONArray arregloJSON = objeto.getJSONArray("d");
-                FactoryVivienda factory = FactoryVivienda.getInstance();
+                FactoryViviendaImpl factory = FactoryViviendaImpl.getInstance();
                 factory.fillViviendas(arregloJSON, viviendaPropertysNames);
             }catch(JSONException e){
 

@@ -1,10 +1,10 @@
-package co.gov.fna.vivienda.utilidades;
+package co.gov.fna.interfaces;
 
 import org.json.JSONArray;
 
 import java.util.List;
 
-import co.gov.fna.vivienda.modelo.entidades.Vivienda;
+import co.gov.fna.entidades.Vivienda;
 
 /**
  * Created by usuario on 2/07/14.

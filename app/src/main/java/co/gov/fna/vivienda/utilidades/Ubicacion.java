@@ -1,4 +1,4 @@
-package co.gov.fna.vivienda.modelo.entidades;
+package co.gov.fna.vivienda.utilidades;
 
 /**
  * Created by Oscar Gallon

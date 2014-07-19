@@ -1,4 +1,4 @@
-package co.gov.fna.vivienda.utilidades;
+package co.gov.fna.implementation;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -7,22 +7,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.gov.fna.vivienda.modelo.entidades.Vivienda;
+import co.gov.fna.interfaces.IFactoryVivienda;
+import co.gov.fna.entidades.Vivienda;
 
 /**
  * Created by usuario on 2/07/14.
  */
-public class FactoryVivienda implements IFactoryVivienda {
+public class FactoryViviendaImpl implements IFactoryVivienda {
 
-    private static FactoryVivienda instance;
+    private static FactoryViviendaImpl instance;
     private List<Vivienda> listaViviendas;
-    private FactoryVivienda(){
+    private FactoryViviendaImpl(){
 
     }
 
-    public static  FactoryVivienda getInstance(){
+    public static FactoryViviendaImpl getInstance(){
         if(instance==null){
-            instance = new FactoryVivienda();
+            instance = new FactoryViviendaImpl();
         }
         return instance;
     }

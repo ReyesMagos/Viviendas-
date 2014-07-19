@@ -1,4 +1,4 @@
-package co.gov.fna.vivienda.presentacion.actividades;
+package co.gov.fna.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,8 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.usuario.tryww.R;
-
-import co.gov.fna.vivienda.servicios.GetRestServices;
 
 
 public class MyActivity extends Activity {

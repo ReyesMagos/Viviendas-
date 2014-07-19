@@ -1,8 +1,10 @@
-package co.gov.fna.vivienda.modelo.entidades;
+package co.gov.fna.entidades;
 
 import android.graphics.Bitmap;
 
 import java.util.List;
+
+import co.gov.fna.vivienda.utilidades.Ubicacion;
 
 
 /**
