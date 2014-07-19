@@ -81,6 +81,8 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setEmailConstructora(object.getString(arrayPropertiesNames[j]));
                 j++;
+                v.setEstrato(object.getString(arrayPropertiesNames[j]));
+                j++;
                 v.setHoraDeAtencionDesde(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setDiaDeAtencionHasta(object.getString(arrayPropertiesNames[j]));
@@ -111,6 +113,7 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setTipoInmuebleOfrecido(object.getString(arrayPropertiesNames[j]));
                 j++;
+
 
 
 
