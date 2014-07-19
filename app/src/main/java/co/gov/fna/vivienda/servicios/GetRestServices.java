@@ -32,7 +32,11 @@ public class GetRestServices extends AsyncTask<String,String, String> {
 
     public GetRestServices(String url,Activity activity) {
         this.url = url;
-        this.controlador= new Controlador((MyActivity)activity);
+        if(activity instanceof MyActivity) {
+            this.controlador = new Controlador((MyActivity) activity);
+            controlador.setGoingForViviendasSet(true);
+        }
+
 
     }
 

@@ -91,13 +91,13 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setEstadoObra(object.getString(arrayPropertiesNames[j]));
                 j++;
-                v.setFechaDeEntrega(object.getString(arrayPropertiesNames[j]));
-                j++;
                 v.setEstrato(object.getString(arrayPropertiesNames[j]));
+                j++;
+                v.setFechaDeEntrega(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setHoraDeAtencionDesde(object.getString(arrayPropertiesNames[j]));
                 j++;
-                v.setDiaDeAtencionHasta(object.getString(arrayPropertiesNames[j]));
+                v.setHoraDeAtencionHasta(object.getString(arrayPropertiesNames[j]));
                 j++;
                 List<String> l = new ArrayList<String>();
                 l.add(object.getString(arrayPropertiesNames[j]));
@@ -145,9 +145,9 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setPrecioHasta(object.getString(arrayPropertiesNames[j]));
                 j++;
-                v.setTelefonoCelularSalaDeVentas(object.getString(arrayPropertiesNames[j]));
-                j++;
                 v.setTelefonoContactContructora(object.getString(arrayPropertiesNames[j]));
+                j++;
+                v.setTelefonoCelularSalaDeVentas(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setTelefonoFijoSalaDeVentas(object.getString(arrayPropertiesNames[j]));
                 j++;

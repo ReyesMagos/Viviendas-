@@ -13,11 +13,12 @@
         <item name="credito_fna">creditofna</item>
         <item name="ciudad">ciudad</item>
         <item name="cuota_inicial">cuotainicial</item>
+        <item name="cuota_mensual">cuotamensual</item>
         <item name="departamento">departamento</item>
         <item name="dia_de_atencion_desde">diadeatencion_desde</item>
         <item name="dia_de_atencion_hasta">diadeatencion_hasta</item>
         <item name="direccion_proyecto">direccionproyecto</item>
-        <item name="direccion_sala_de_ventas">direccion_saladeventas</item>
+        <item name="direccion_sala_de_ventas">direccionsala_deventas</item>
         <item name="direccion_sede_principal_constructora">direccionsede_principal_constructora</item>
         <item name="email_constructora">emailconstructora</item>
         <item name="estado_obra">estadoobra</item>
@@ -37,7 +38,7 @@
         <item name="nit_constructora">nitconstructora</item>
         <item name="nombre_contacto_constructora">nombrecontactoconstructora</item>
         <item name="nombre_contacto_sala_de_venta">nombrecontacto_saladeventas</item>
-        <item name="nombre_constructora">nombrecontructora</item>
+        <item name="nombre_constructora">nombreconstructora</item>
         <item name="nombre_proyecto">nombreproyecto</item>
         <item name="nombre_representante_legal_constructora">nombrerepresentante_legalconstructora</item>
         <item name="precio_desde">preciodesde</item>
