@@ -17,7 +17,7 @@ public class PuntoAtencion {
     private String horarioExtendido;
     private String tipoServicioOfrecido;
     private String costoTransaccion;
-    private String cedulaCodigoBarras;
+    private String cedulaCodigoBarras; 
 
     public PuntoAtencion(String tipoEntidad, String numero, Ubicacion ubicacion, String departamento, String municipio, String cedulaCodigoBarras) {
         setTipoEntidad(tipoEntidad);
