@@ -1,4 +1,4 @@
-package co.gov.fna.vivienda.co.gov.fna.vivienda.servicios;
+package co.gov.fna.vivienda.servicios;
 
 import android.os.AsyncTask;
 
@@ -13,7 +13,8 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-import co.gov.fna.vivienda.co.gov.fna.vivienda.utilidades.FactoryVivienda;
+import co.gov.fna.vivienda.controlador.Controlador;
+import co.gov.fna.vivienda.utilidades.FactoryVivienda;
 import co.gov.fna.vivienda.modelo.entidades.Vivienda;
 
 /**
@@ -25,9 +26,11 @@ public class GetRestServices extends AsyncTask<String,String, String> {
     private String url;
     private String TAG_RESPONSE_OK="its_ok";
     private String TAG_RESPONSE_ERROR="something_go_wrong";
+    private Controlador controlador;
 
     public GetRestServices(String url) {
         this.url = url;
+        this.controlador= new Controlador();
     }
 
     public String getUrl() {
@@ -47,15 +50,12 @@ public class GetRestServices extends AsyncTask<String,String, String> {
 
         String stringResp;
         try{
+
             HttpResponse resp= cliente.execute(del);
             HttpEntity entity= resp.getEntity();
             stringResp = EntityUtils.toString(entity);
             JSONObject respJSON= new JSONObject(stringResp);
-            JSONArray arregloJSON = respJSON.getJSONArray("d");
-            FactoryVivienda factory = FactoryVivienda.getInstance();
-            List<Vivienda> lista= factory.getViviendasRest(arregloJSON);
-
-
+            controlador.procesaRespuestaRestFul(respJSON);
 
         }catch(Exception e){
 

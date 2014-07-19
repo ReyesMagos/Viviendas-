@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.example.usuario.tryww.R;
 
-import co.gov.fna.vivienda.co.gov.fna.vivienda.servicios.GetRestServices;
+import co.gov.fna.vivienda.servicios.GetRestServices;
 
 
 public class MyActivity extends Activity {
@@ -20,9 +20,6 @@ public class MyActivity extends Activity {
     }
 
     public void getServices(View v){
-        GetRestServices services =
-                new GetRestServices("http://servicedatosabiertoscolombia.cloudapp.net/v1/Fondo_Nacional_Ahorro/bdfnaviviendafinal?$format=json");
-          services.execute();
     }
 
     @Override

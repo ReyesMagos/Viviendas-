@@ -1,4 +1,4 @@
-package co.gov.fna.vivienda.co.gov.fna.vivienda.utilidades;
+package co.gov.fna.vivienda.utilidades;
 
 import org.json.JSONArray;
 
@@ -11,5 +11,6 @@ import co.gov.fna.vivienda.modelo.entidades.Vivienda;
  */
 public interface  IFactoryVivienda {
 
-    List<Vivienda> getViviendasRest(JSONArray arreglo);
+    List<Vivienda> getViviendasRest();
+    void fillViviendas(JSONArray arreglo, String [] arrayPropertiesNames);
 }

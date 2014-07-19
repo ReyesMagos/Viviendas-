@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Vivienda {
 
-    private int telefonoCelularSalaDeVentas;
+    private String telefonoCelularSalaDeVentas;
     private String direccionSalaDeVentas;
     private List<Bitmap> imagenes;
     private String direccionSedePrincipalConstructora;
@@ -46,7 +46,33 @@ public class Vivienda {
     private String direccionProyecto;
     private String precioDesde;
     private String departamento;
+    private String precioHasta;
+    private String nombreConstructora;
+    private String nombreProyecto;
 
+    public String getPrecioHasta() {
+        return precioHasta;
+    }
+
+    public String getNombreConstructora() {
+        return nombreConstructora;
+    }
+
+    public void setNombreConstructora(String nombreConstructora) {
+        this.nombreConstructora = nombreConstructora;
+    }
+
+    public void setPrecioHasta(String precioHasta) {
+        this.precioHasta = precioHasta;
+    }
+
+    public String getNombreProyecto() {
+        return nombreProyecto;
+    }
+
+    public void setNombreProyecto(String nombreProyecto) {
+        this.nombreProyecto = nombreProyecto;
+    }
 
     public String getDepartamento() {
         return departamento;
@@ -56,11 +82,11 @@ public class Vivienda {
         this.departamento = departamento;
     }
 
-    public int getTelefonoCelularSalaDeVentas() {
+    public String getTelefonoCelularSalaDeVentas() {
         return telefonoCelularSalaDeVentas;
     }
 
-    public void setTelefonoCelularSalaDeVentas(int telefonoCelularSalaDeVentas) {
+    public void setTelefonoCelularSalaDeVentas(String telefonoCelularSalaDeVentas) {
         this.telefonoCelularSalaDeVentas = telefonoCelularSalaDeVentas;
     }
 
