@@ -8,18 +8,23 @@ import android.view.View;
 
 import com.example.usuario.tryww.R;
 
+import co.gov.fna.vivienda.controlador.Controlador;
 import co.gov.fna.vivienda.servicios.GetRestServices;
 
 
 public class MyActivity extends Activity {
+    private Controlador controlador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+        controlador = new Controlador(this);
     }
 
     public void getServices(View v){
+        controlador.setGoingForViviendasSet(true);
+        controlador.getRestFullServices();
     }
 
     @Override

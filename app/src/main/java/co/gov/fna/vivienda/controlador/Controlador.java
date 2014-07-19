@@ -20,6 +20,13 @@ public class Controlador {
 
     private boolean isGoingForViviendasSet;
     private MyActivity activity;
+    private String[] urlSet;
+
+    public Controlador(MyActivity actividad){
+        this.activity= actividad;
+        this.urlSet= actividad.getResources().getStringArray(R.array.urlset);
+
+    }
 
     public void procesaRespuestaRestFul(JSONObject objeto){
         if(isGoingForViviendasSet){
@@ -36,8 +43,14 @@ public class Controlador {
     }
 
     public void getRestFullServices(){
-        GetRestServices services =
-                new GetRestServices("http://servicedatosabiertoscolombia.cloudapp.net/v1/Fondo_Nacional_Ahorro/bdfnaviviendafinal?$format=json");
+        GetRestServices services;
+        if(isGoingForViviendasSet) {
+             services =
+                    new GetRestServices(getUrlSet()[0]);
+        }else{
+            services =
+                    new GetRestServices(getUrlSet()[1]);
+        }
         this.isGoingForViviendasSet=true;
         services.execute();
 
@@ -57,6 +70,14 @@ public class Controlador {
 
     public void setActivity(MyActivity activity) {
         this.activity = activity;
+    }
+
+    public String[] getUrlSet() {
+        return urlSet;
+    }
+
+    public void setUrlSet(String[] urlSet) {
+        this.urlSet = urlSet;
     }
 }
 

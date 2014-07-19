@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import co.gov.fna.vivienda.modelo.entidades.Ubicacion;
 import co.gov.fna.vivienda.modelo.entidades.Vivienda;
 
 /**
@@ -16,12 +17,13 @@ public class FactoryVivienda implements IFactoryVivienda {
 
     private static FactoryVivienda instance;
     private List<Vivienda> listaViviendas;
-    private FactoryVivienda(){
+
+    private FactoryVivienda() {
 
     }
 
-    public static  FactoryVivienda getInstance(){
-        if(instance==null){
+    public static FactoryVivienda getInstance() {
+        if (instance == null) {
             instance = new FactoryVivienda();
         }
         return instance;
@@ -34,19 +36,17 @@ public class FactoryVivienda implements IFactoryVivienda {
     }
 
 
-
-
     @Override
     public void fillViviendas(JSONArray arreglo, String[] arrayPropertiesNames) {
 
-        if(arreglo==null||arreglo.length()==0){
+        if (arreglo == null || arreglo.length() == 0) {
             return;
         }
 
-        listaViviendas= new ArrayList<Vivienda>();
+        listaViviendas = new ArrayList<Vivienda>();
         JSONObject object;
-        try{
-            for (int i = 0; i <arreglo.length() ; i++) {
+        try {
+            for (int i = 0; i < arreglo.length(); i++) {
 
                 object = arreglo.getJSONObject(i);
                 Vivienda v = new Vivienda();
@@ -67,7 +67,13 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setClaseDEVivienda(object.getString(arrayPropertiesNames[j]));
                 j++;
+                v.setCreditoFna(object.getString(arrayPropertiesNames[j]));
+                j++;
                 v.setCiudad(object.getString(arrayPropertiesNames[j]));
+                j++;
+                v.setCuotaInicial(object.getString(arrayPropertiesNames[j]));
+                j++;
+                v.setCuotaMensual(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setDepartamento(object.getString(arrayPropertiesNames[j]));
                 j++;
@@ -83,17 +89,46 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setEmailConstructora(object.getString(arrayPropertiesNames[j]));
                 j++;
+                v.setEstadoObra(object.getString(arrayPropertiesNames[j]));
+                j++;
                 v.setFechaDeEntrega(object.getString(arrayPropertiesNames[j]));
                 j++;
-                
                 v.setEstrato(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setHoraDeAtencionDesde(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setDiaDeAtencionHasta(object.getString(arrayPropertiesNames[j]));
                 j++;
+                List<String> l = new ArrayList<String>();
+                l.add(object.getString(arrayPropertiesNames[j]));
+                j++;
+                l.add(object.getString(arrayPropertiesNames[j]));
+                j++;
+                l.add(object.getString(arrayPropertiesNames[j]));
+                j++;
+                l.add(object.getString(arrayPropertiesNames[j]));
+                j++;
+                l.add(object.getString(arrayPropertiesNames[j]));
+                j++;
+                l.add(object.getString(arrayPropertiesNames[j]));
+                j++;
+                v.setUrlImagenes(l);
+
+                //Latitud
+                Double x = Double.parseDouble(object.getString(arrayPropertiesNames[j]));
+                Double y = 12.2;
+                Ubicacion u = new Ubicacion(x, y);
+                //acaba
+                j++;
                 v.setLocalidadoZona(object.getString(arrayPropertiesNames[j]));
                 j++;
+                //longitud
+                y = Double.parseDouble(object.getString(arrayPropertiesNames[j]));
+                u.setLonguitud(y);
+                v.setUbicacion(u);
+                //Aca acaba
+                j++;
+
                 v.setNitConstructora(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setNombreContactoConstructora(object.getString(arrayPropertiesNames[j]));
@@ -118,16 +153,14 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setTipoInmuebleOfrecido(object.getString(arrayPropertiesNames[j]));
                 j++;
-
-
-
-
-
+                v.setValorInmueble(object.getString(arrayPropertiesNames[j]));
+                listaViviendas.add(v);
 
             }
 
 
-        }catch(JSONException e){
+
+        } catch (JSONException e) {
             return;
         }
 

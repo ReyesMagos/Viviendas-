@@ -26,6 +26,7 @@ public class Vivienda {
     private String telefonoFijoSalaDeVentas;
     private Ubicacion ubicacion;
     private String cuotaInicial;
+    private String cuotaMensual;
     private List<String> urlImagenes;
     private String localidadoZona;
     private String tipoInmuebleOfrecido;
@@ -369,5 +370,13 @@ public class Vivienda {
 
     public void setPrecioDesde(String precioDesde) {
         this.precioDesde = precioDesde;
+    }
+
+    public String getCuotaMensual() {
+        return cuotaMensual;
+    }
+
+    public void setCuotaMensual(String cuotaMensual) {
+        this.cuotaMensual = cuotaMensual;
     }
 }
