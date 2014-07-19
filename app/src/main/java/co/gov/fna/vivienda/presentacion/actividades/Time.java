@@ -12,7 +12,7 @@ import co.gov.fna.vivienda.controlador.Controlador;
 import co.gov.fna.vivienda.servicios.GetRestServices;
 
 
-public class MyActivity extends Activity {
+public class Time extends Activity {
     private Controlador controlador;
 
     @Override

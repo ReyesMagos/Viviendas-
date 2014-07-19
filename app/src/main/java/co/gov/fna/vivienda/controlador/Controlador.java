@@ -6,10 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.List;
-
-import co.gov.fna.vivienda.modelo.entidades.Vivienda;
-import co.gov.fna.vivienda.presentacion.actividades.MyActivity;
+import co.gov.fna.vivienda.presentacion.actividades.Time;
 import co.gov.fna.vivienda.servicios.GetRestServices;
 import co.gov.fna.vivienda.utilidades.FactoryVivienda;
 
@@ -19,10 +16,10 @@ import co.gov.fna.vivienda.utilidades.FactoryVivienda;
 public class Controlador {
 
     private boolean isGoingForViviendasSet;
-    private MyActivity activity;
+    private Time activity;
     private String[] urlSet;
 
-    public Controlador(MyActivity actividad){
+    public Controlador(Time actividad){
         this.activity= actividad;
         this.urlSet= actividad.getResources().getStringArray(R.array.urlset);
 
@@ -64,11 +61,11 @@ public class Controlador {
         this.isGoingForViviendasSet = isGoingForViviendasSet;
     }
 
-    public MyActivity getActivity() {
+    public Time getActivity() {
         return activity;
     }
 
-    public void setActivity(MyActivity activity) {
+    public void setActivity(Time activity) {
         this.activity = activity;
     }
 
