@@ -12,9 +12,13 @@
         android:theme="@style/AppTheme" >
         <activity
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:name="co.gov.fna.vivienda.presentacion.actividades.Time"
 =======
             android:name="co.gov.fna.vivienda.presentacion.actividades.TimelineActivity"
+>>>>>>> Propiedades-Viviendas-
+=======
+            android:name="co.gov.fna.vivienda.presentacion.actividades.LoginActitvity"
 >>>>>>> Propiedades-Viviendas-
             android:label="@string/app_name" >
             <intent-filter>
